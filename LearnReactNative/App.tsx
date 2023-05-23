@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Greeting from './components/greeting';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -76,10 +78,7 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Hello Worlds!">
-            나는 <Text style={styles.highlight}>안드로이드</Text>에서 다시 한번
-            리액트 네이티브 앱을 구동해봤다.
-          </Section>
+          <Greeting></Greeting>
         </View>
       </ScrollView>
     </SafeAreaView>
